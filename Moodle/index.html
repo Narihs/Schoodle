@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="appModule">
+    <head>
+     <title>Moodle</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Main angular cdn file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <!--Angular routes cdn file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+<!--JS Files-->
+<script src="js/appModule.js"></script>
+<script src="js/homeModule.js"></script>
+
+</head>
+    <body>
+         <div class="container-fluid">
+        <!--navbar area-->
+        <section class="row nav-row">
+            <div class="col-xs-12" id="navDiv">
+                <!--full nav bar-->
+                <nav class="navbar navbar-default static-top">
+                    <!--navigation when collapsed-->
+                    <div class="navbar-header">
+
+                        <button id="nav-collapse" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--Site Name-->
+                        <a href="#!/home" class="navbar-brand" id="siteName"> MOODLE</a>
+                    </div>
+                    <!--navbar menu-->
+                    <div id="menu" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" class="linkHome">School</a>
+                            </li>
+                            <li>
+                                <a href="#!/register" class="linkHome">Administration</a>
+                            </li>
+                            <li>
+                                <a href="#!/myPlaylist" class="linkBody"> Shiran</span></a>
+                            </li>
+                            <li>
+                                <a href="#!/logout" class="linkBody">Log Out</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <section ng-view></section>
+    </body>
+</html>
